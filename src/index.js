@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { HealthDashboard } from "./components/healthDashboard/HealthDashboard.jsx";
 
 const App = () => {
@@ -11,4 +11,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container); // New React 18+ rendering method
+root.render(<App />);
